@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Ticker from "react-ticker";
+import "./App.scss";
+import NewsTicker from "./components/news-ticker/news-ticker.component";
+import VideoEmbed from "./components/video-embed/video-embed.component";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="grid">
+			<h2 className="top"></h2>
+			<div className="left"></div>
+			<div className="video">
+				<VideoEmbed embedId={"yYkCqDrSehc"} />
+			</div>
+			<div className="right"></div>
+			<div className="bottom">
+				<NewsTicker speed={15} />
+			</div>
+		</div>
+	);
 }
 
 export default App;
